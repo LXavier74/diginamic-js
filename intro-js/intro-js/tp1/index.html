@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device=width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+<script>
+    
+let fonctionSum = function(a,b){
+    return a+b;
+};
+let res = fonctionSum(1,1);
+console.log(res);
+document.write(res);
+
+
+nb = prompt("saisir un nb")
+console.log(nb);
+
+for(i=0;i<nb;i++)
+{
+    if (i%15 ===0)
+    {
+        document.write("FizzBuzz");
+    }
+    else if (i%5 ===0)
+    {
+        document.write("Buzz");
+    }
+   else if (i%3 ===0)
+    {
+        document.write("FIZZ");
+    }
+  
+    else {
+        document.write(i)
+            }
+
+}
+
+
+</script>
+
+
+</body>
+
+
+</html>
