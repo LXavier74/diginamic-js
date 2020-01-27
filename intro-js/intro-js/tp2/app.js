@@ -1,14 +1,24 @@
 
+
      let y = Math.floor(Math.random() * 10 + 0); 
     let guess = 1; 
     let compteur=5; 
     let nb= document.querySelector("#nb");
     nb.textContent=compteur;
-let gagne=false;
-let perdu =false;
+    let gagne=false;
+    let perdu=false;
 
-        document.getElementById("submitdevinette").onclick = function(){ 
- 
+    function initialiser()
+    {
+        y = Math.floor(Math.random() * 10 + 0); 
+        compteur = 5;
+        guess=1;
+        gagne=false;
+        perdu=false;
+    }
+
+     document.getElementById("submitdevinette").onclick = function(){ 
+        var x = document.getElementById("champDevinette").value; 
 
 
    if(x == y && compteur!=0) 
@@ -29,10 +39,9 @@ let perdu =false;
         perdu=true;
        }
    }
-   
-   if(gagne==true || perdu==true)
+   if (perdu==true || gagne==true)
    {
-    document.location.reload(true)
+   initialiser();
    }
    nb.textContent=compteur;
 
