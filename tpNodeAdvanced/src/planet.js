@@ -3,7 +3,7 @@ class Planet{
     constructor({name, population})
     {
         this._name=name;
-        this._population = population;
+        this.population = population;
     }
     get name()
     {
@@ -14,24 +14,27 @@ class Planet{
     {
         this._name = name;
     }
-
+/*
     get population()
     {
-        return this._population;
+        return this.population;
     }
 
     set population(population){
         this._population = population; 
     }
-
+*/
     static countPlanetsPopulation(tab)
     {
-        /*
-        let reducer = (accumulator, _population) => accumulator + _population;
-        console.log(tab.reduce(reducer));
-        return reducer;
-*/
-        let reducer = tab.reduce((a,b) => a+b._population,0);
+     
+for(let i=0;i<tab.length;i++)
+        {
+            if(tab[i].population=="unknown")
+            {
+                tab[i].population=0;
+            }
+        }
+        let reducer = tab.reduce((a,b) => a+parseInt(b.population),0);
       
        console.log(reducer);
        return reducer;
